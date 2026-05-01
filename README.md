@@ -7,7 +7,7 @@ Status: In development
 
 ## Architecture
 
-![architecture](.assets/api_gateway_integration.png)
+![architecture](./assets/api_gateway_integration.png)
 
 
 - Monorepo (โฟลเดอร์ `apps/` สำหรับแต่ละ service, `libs/` สำหรับ shared code)
@@ -27,7 +27,7 @@ Status: In development
 
 ## Booking sequence
 
-![architecture](.assets/booking_sequence.png)
+![architecture](./assets/booking_sequence.png)
 
 ## Quickstart
 
