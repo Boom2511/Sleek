@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ES2022",
+    "baseUrl": ".", 
+    "outDir": "./dist",
+    "types": ["node"],
+    "strict": true,
+    "sourceMap": true,
+    "declaration": true,
+    "incremental": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@sleek/common": ["./libs/common/src"],
+      "@sleek/common/*": ["./libs/common/src/*"],
+      "@sleek/config": ["./libs/config/src"],
+      "@sleek/config/*": ["./libs/config/src/*"],
+      "@sleek/database": ["./libs/database/src"],
+      "@sleek/database/*": ["./libs/database/src/*"],
+      "@sleek/logger": ["./libs/logger/src"],
+      "@sleek/logger/*": ["./libs/logger/src/*"],
+      "@sleek/rabbitmq": ["./libs/rabbitmq/src"],
+      "@sleek/rabbitmq/*": ["./libs/rabbitmq/src/*"],
+      "@sleek/redis": ["./libs/redis/src"],
+      "@sleek/redis/*": ["./libs/redis/src/*"],
+      "@sleek/shared-auth": ["./libs/shared-auth/src"],
+      "@sleek/shared-auth/*": ["./libs/shared-auth/src/*"],
+      "@sleek/utils": ["./libs/utils/src"],
+      "@sleek/utils/*": ["./libs/utils/src/*"]
+    }
+  }
+}
+    

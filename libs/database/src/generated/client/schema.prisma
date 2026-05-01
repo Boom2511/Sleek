@@ -1,0 +1,39 @@
+// libs/database/prisma/schema.prisma
+
+generator client {
+  provider   = "prisma-client-js"
+  output     = "../src/generated/client"
+  engineType = "library"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Station {
+  id        String    @id @default(uuid())
+  name      String
+  location  String
+  chargers  Charger[]
+  createdAt DateTime  @default(now())
+}
+
+model Charger {
+  id        String    @id @default(uuid())
+  stationId String
+  station   Station   @relation(fields: [stationId], references: [id])
+  type      String
+  status    String
+  bookings  Booking[]
+}
+
+model Booking {
+  id        String   @id @default(uuid())
+  userId    String
+  chargerId String
+  charger   Charger  @relation(fields: [chargerId], references: [id])
+  startTime DateTime
+  endTime   DateTime
+  status    String // PENDING, CONFIRMED, CANCELLED, COMPLETED
+  createdAt DateTime @default(now())
+}
